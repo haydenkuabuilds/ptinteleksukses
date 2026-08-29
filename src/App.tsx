@@ -209,3 +209,6 @@ export default function App() {
         <p className="font-semibold text-white mb-2">Pusat Tuisyen Intelek Sukses</p>
         <p>&copy; {new Date().getFullYear()} Semua Hak Cipta Terpelihara.</p>
       </footer>
+    </div>
+  );
+}
