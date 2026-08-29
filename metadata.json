@@ -1,0 +1,6 @@
+{
+  "name": "Pusat Tuisyen Intelek Sukses",
+  "description": "Laman web rasmi Pusat Tuisyen Intelek Sukses - Memperkasa Minda Muda, Mencapai Kecemerlangan Akademik.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
