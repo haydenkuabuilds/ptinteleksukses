@@ -159,6 +159,126 @@ export default function App() {
             </div>
           </div>
         )}
+            {/* MAIN DYNAMIC CONTENT CONTAINER */}
+      <main className="flex-1 pt-20">
+        
+        {/* UTAMA TAB */}
+        {currentTab === 'home' && (
+          <div className="animate-in fade-in duration-300">
+            <header className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div>
+                <span className="bg-blue-50 text-blue-700 text-sm font-semibold px-4 py-1.5 rounded-full inline-block mb-6">
+                  Pusat Tuisyen Intelek Sukses
+                </span>
+                <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">
+                  Memperkasa Minda Muda, <br />
+                  <span className="text-blue-600">Mencapai Kecemerlangan</span>
+                </h1>
+                <p className="mt-6 text-lg text-gray-600 leading-relaxed">
+                  Sertai bimbingan eksklusif bersama pendidik berpengalaman untuk menguasai subjek teras dengan yakin dan cemerlang.
+                </p>
+                <div className="mt-8">
+                  <button onClick={() => handleOpenRegister('trial')} className="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition">
+                    Cuba Kelas Percuma
+                  </button>
+                </div>
+              </div>
+              <div className="relative">
+                <img 
+                  src="/ptinteleksukses/cikguralliya.png.png" 
+                  alt="Sesi Pembelajaran Cikgu Raliya" 
+                  className="rounded-2xl shadow-2xl w-full object-cover h-[400px]"
+                />
+              </div>
+            </header>
+
+            <section className="bg-white py-16 border-t border-gray-100">
+              <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                  <img 
+                    src="/ptinteleksukses/classroom.jpeg.jpeg" 
+                    alt="Suasana Kelas Kondusif" 
+                    className="rounded-2xl shadow-xl w-full object-cover h-[350px]"
+                  />
+                </div>
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Misi & Visi Akademik Kami</h2>
+                  <p className="text-gray-600 text-lg leading-relaxed mb-4">
+                    Kami menyediakan persekitaran pembelajaran kelas fizikal dan dalam talian yang interaktif, berfokus kepada teknik pemahaman pantas subjek kritikal.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+        )}
+
+        {/* TENTANG KAMI TAB */}
+        {currentTab === 'about' && (
+          <div className="max-w-4xl mx-auto px-6 py-16 animate-in fade-in duration-300">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Tentang Pusat Tuisyen Kami</h2>
+            <div className="flex flex-col md:flex-row items-center gap-8 bg-white p-8 rounded-2xl shadow-sm border border-gray-100 mt-8">
+              <img 
+                src="/ptinteleksukses/alex_ralliya.png.png" 
+                alt="Alex bersama Cikgu Raliya" 
+                className="w-32 h-32 rounded-full object-cover border-4 border-blue-500 shadow-md flex-shrink-0"
+              />
+              <div>
+                <h3 className="text-xl font-bold text-gray-900">Bimbingan Profesional & Mesra</h3>
+                <p className="text-gray-600 mt-2 leading-relaxed">
+                  Di Pusat Tuisyen Intelek Sukses, barisan pendidik berdedikasi kami komited sepenuhnya untuk membantu anak-anak anda melonjakkan prestasi akademik.
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* PROGRAM PAKEJ TAB */}
+        {currentTab === 'program' && (
+          <div className="max-w-6xl mx-auto px-6 py-16 animate-in fade-in duration-300">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">Pakej Program & Kurikulum</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+              <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                <h4 className="text-xl font-bold text-gray-900">Pakej Sekolah Rendah (UASA)</h4>
+                <button onClick={() => handleOpenRegister('regular')} className="w-full mt-6 bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition">Daftar Pakej</button>
+              </div>
+              <div className="bg-white p-6 rounded-2xl border border-blue-500 shadow-md">
+                <h4 className="text-xl font-bold text-gray-900">Pakej Menengah Atas (SPM)</h4>
+                <button onClick={() => handleOpenRegister('regular')} className="w-full mt-6 bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition">Daftar Pakej</button>
+              </div>
+              <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                <h4 className="text-xl font-bold text-gray-900">Pakej Membaca Intensif</h4>
+                <button onClick={() => handleOpenRegister('reading_package')} className="w-full mt-6 bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition">Daftar Pakej</button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* HUBUNGI KAMI TAB */}
+        {currentTab === 'contact' && (
+          <div className="max-w-md mx-auto px-6 py-16 animate-in fade-in duration-300">
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">Hubungi Pejabat Kami</h2>
+              <p className="text-gray-500 text-sm mb-6">Hantarkan mesej pertanyaan langsung kepada pegawai khidmat pelanggan kami.</p>
+              <form onSubmit={(e) => { e.preventDefault(); alert('Pertanyaan anda berjaya dihantar!'); }} className="space-y-4">
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-1">Nama Penuh</label>
+                  <input type="text" required className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-1">Nombor Telefon</label>
+                  <input type="tel" required className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-1">Mesej Pertanyaan</label>
+                  <textarea rows={4} required className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
+                </div>
+                <button type="submit" className="w-full bg-blue-600 text-white font-semibold py-2.5 rounded-lg hover:bg-blue-700 transition">
+                  Hantar Pertanyaan Mesej
+                </button>
+              </form>
+            </div>
+          </div>
+        )}
       </main>
 
       {/* FLOATING WHATSAPP BUTTON */}
@@ -166,14 +286,9 @@ export default function App() {
         href="https://wa.me."
         target="_blank"
         rel="noreferrer"
-      {/* FLOATING WHATSAPP BUTTON */}
-      <a
-        href="https://wa.me."
-        target="_blank"
-        rel="noreferrer"
         className="fixed bottom-6 right-6 z-40 bg-[#28A745] hover:bg-[#218838] text-white px-5 py-3.5 rounded-full shadow-xl flex items-center gap-2 transition-all hover:scale-105"
       >
-        WhatsApp Bantuan Pendaftaran
+        <span className="text-xs font-bold">WhatsApp Bantuan Pendaftaran</span>
       </a>
 
       {/* INTERACTIVE REGISTRATION MODAL */}
@@ -181,22 +296,14 @@ export default function App() {
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50 animate-in fade-in duration-200">
           <div className="bg-white rounded-2xl max-w-sm w-full p-6 relative shadow-2xl">
             <h3 className="text-lg font-bold text-gray-900 mb-2">Borang Pendaftaran Terbuka</h3>
-            <p className="text-xs text-gray-500 mb-4">
-              Jenis Kelas Terpilih: <span className="font-bold text-blue-600 uppercase">{registerType}</span>
-            </p>
+            <p className="text-xs text-gray-500 mb-4">Jenis Kelas Terpilih: <span className="font-bold text-blue-600 uppercase">{registerType}</span></p>
             <div className="space-y-3">
               <input type="text" placeholder="Nama Pelajar" className="w-full p-2 border rounded-lg text-sm" />
               <input type="text" placeholder="Tingkatan / Darjah" className="w-full p-2 border rounded-lg text-sm" />
-              <button 
-                onClick={() => { setIsRegisterOpen(false); alert('Pendaftaran berjaya disimpan! Kami akan menghubungi anda via WhatsApp.'); }} 
-                className="w-full bg-green-600 text-white font-semibold py-2 rounded-lg text-sm hover:bg-green-700 transition mt-2"
-              >
+              <button onClick={() => { setIsRegisterOpen(false); alert('Pendaftaran berjaya disimpan! Kami akan menghubungi anda via WhatsApp.'); }} className="w-full bg-green-600 text-white font-semibold py-2 rounded-lg text-sm hover:bg-green-700 transition mt-2">
                 Sahkan Hantar Pendaftaran
               </button>
-              <button 
-                onClick={() => setIsRegisterOpen(false)} 
-                className="w-full bg-gray-100 text-gray-600 py-2 rounded-lg text-sm hover:bg-gray-200 transition"
-              >
+              <button onClick={() => setIsRegisterOpen(false)} className="w-full bg-gray-100 text-gray-600 py-2 rounded-lg text-sm hover:bg-gray-200 transition">
                 Tutup Borang
               </button>
             </div>
@@ -209,3 +316,8 @@ export default function App() {
         <p className="font-semibold text-white mb-2">Pusat Tuisyen Intelek Sukses</p>
         <p>&copy; {new Date().getFullYear()} Semua Hak Cipta Terpelihara.</p>
       </footer>
+
+    </div>
+  );
+}
+
