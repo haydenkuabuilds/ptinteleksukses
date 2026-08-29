@@ -17,14 +17,14 @@ export default function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#f7f9fb] text-[#191c1e] font-sans antialiased">
-      
+
       {/* NAVIGATION BAR */}
       <nav className="bg-white shadow-sm border-b border-gray-100 fixed top-0 left-0 right-0 h-20 z-50 flex items-center">
         <div className="max-w-7xl mx-auto px-6 w-full flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <img 
-              src="/ptinteleksukses/logo.jpeg.jpeg" 
-              alt="Logo" 
+            <img
+              src="/ptinteleksukses/logo.jpeg.jpeg"
+              alt="Logo"
               className="h-10 w-auto object-contain rounded"
             />
             <span className="text-xl font-bold text-blue-900 tracking-wide">Intelek Sukses</span>
@@ -41,7 +41,7 @@ export default function App() {
 
       {/* DYNAMIC MAIN CONTENT */}
       <main className="flex-1 pt-20">
-        
+
         {/* HOME VIEW */}
         {currentTab === 'home' && (
           <div className="animate-in fade-in duration-300">
@@ -64,9 +64,9 @@ export default function App() {
                 </div>
               </div>
               <div className="relative">
-                <img 
-                  src="/ptinteleksukses/cikguralliya.png.png" 
-                  alt="Sesi Pembelajaran Cikgu Raliya" 
+                <img
+                  src="/ptinteleksukses/cikguralliya.png.png"
+                  alt="Sesi Pembelajaran Cikgu Raliya"
                   className="rounded-2xl shadow-2xl w-full object-cover h-[400px]"
                 />
               </div>
@@ -75,9 +75,9 @@ export default function App() {
             <section className="bg-white py-16 border-t border-gray-100">
               <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div>
-                  <img 
-                    src="/ptinteleksukses/classroom.jpeg.jpeg" 
-                    alt="Suasana Kelas Kondusif" 
+                  <img
+                    src="/ptinteleksukses/classroom.jpeg.jpeg"
+                    alt="Suasana Kelas Kondusif"
                     className="rounded-2xl shadow-xl w-full object-cover h-[350px]"
                   />
                 </div>
@@ -97,9 +97,9 @@ export default function App() {
           <div className="max-w-4xl mx-auto px-6 py-16 animate-in fade-in duration-300">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Tentang Pusat Tuisyen Kami</h2>
             <div className="flex flex-col md:flex-row items-center gap-8 bg-white p-8 rounded-2xl shadow-sm border border-gray-100 mt-8">
-              <img 
-                src="/ptinteleksukses/alex_ralliya.png.png" 
-                alt="Alex bersama Cikgu Raliya" 
+              <img
+                src="/ptinteleksukses/alex_ralliya.png.png"
+                alt="Alex bersama Cikgu Raliya"
                 className="w-32 h-32 rounded-full object-cover border-4 border-blue-500 shadow-md flex-shrink-0"
               />
               <div>
@@ -163,12 +163,7 @@ export default function App() {
 
       {/* FLOATING WHATSAPP BUTTON */}
       <a
-        href="https://wa.me."
-        target="_blank"
-        rel="noreferrer"
-      {/* FLOATING WHATSAPP BUTTON */}
-      <a
-        href="https://wa.me."
+        href="https://wa.me/60123456789"
         target="_blank"
         rel="noreferrer"
         className="fixed bottom-6 right-6 z-40 bg-[#28A745] hover:bg-[#218838] text-white px-5 py-3.5 rounded-full shadow-xl flex items-center gap-2 transition-all hover:scale-105"
@@ -187,14 +182,14 @@ export default function App() {
             <div className="space-y-3">
               <input type="text" placeholder="Nama Pelajar" className="w-full p-2 border rounded-lg text-sm" />
               <input type="text" placeholder="Tingkatan / Darjah" className="w-full p-2 border rounded-lg text-sm" />
-              <button 
-                onClick={() => { setIsRegisterOpen(false); alert('Pendaftaran berjaya disimpan! Kami akan menghubungi anda via WhatsApp.'); }} 
+              <button
+                onClick={() => { setIsRegisterOpen(false); alert('Pendaftaran berjaya disimpan! Kami akan menghubungi anda via WhatsApp.'); }}
                 className="w-full bg-green-600 text-white font-semibold py-2 rounded-lg text-sm hover:bg-green-700 transition mt-2"
               >
                 Sahkan Hantar Pendaftaran
               </button>
-              <button 
-                onClick={() => setIsRegisterOpen(false)} 
+              <button
+                onClick={() => setIsRegisterOpen(false)}
                 className="w-full bg-gray-100 text-gray-600 py-2 rounded-lg text-sm hover:bg-gray-200 transition"
               >
                 Tutup Borang
