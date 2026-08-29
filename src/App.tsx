@@ -311,13 +311,14 @@ export default function App() {
         </div>
       )}
 
-      {/* FOOTER */}
+        {/* FOOTER */}
       <footer className="bg-gray-900 text-gray-400 py-8 text-center text-xs border-t border-gray-800">
         <p className="font-semibold text-white mb-2">Pusat Tuisyen Intelek Sukses</p>
         <p>&copy; {new Date().getFullYear()} Semua Hak Cipta Terpelihara.</p>
       </footer>
 
-    </div>
-  );
-}
+    </div> // 👈 Needs this closing div tag
+  );       // 👈 Needs this closing return bracket
+}          // 👈 Needs this closing component bracket
+
 
