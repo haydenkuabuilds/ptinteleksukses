@@ -279,7 +279,7 @@ export default function App() {
             </div>
           </div>
         )}
-      </main>
+           </main> {/* 💡 THIS CLOSES THE MAIN OPENING TAG */}
 
       {/* FLOATING WHATSAPP BUTTON */}
       <a
@@ -287,6 +287,7 @@ export default function App() {
         target="_blank"
         rel="noreferrer"
         className="fixed bottom-6 right-6 z-40 bg-[#28A745] hover:bg-[#218838] text-white px-5 py-3.5 rounded-full shadow-xl flex items-center gap-2 transition-all hover:scale-105"
+        title="Hubungi Kami Melalui WhatsApp"
       >
         <span className="text-xs font-bold">WhatsApp Bantuan Pendaftaran</span>
       </a>
@@ -311,7 +312,7 @@ export default function App() {
         </div>
       )}
 
-              {/* FOOTER */}
+      {/* FOOTER */}
       <footer className="bg-gray-900 text-gray-400 py-8 text-center text-xs border-t border-gray-800">
         <p className="font-semibold text-white mb-2">Pusat Tuisyen Intelek Sukses</p>
         <p>&copy; {new Date().getFullYear()} Semua Hak Cipta Terpelihara.</p>
@@ -320,4 +321,5 @@ export default function App() {
     </div>
   );
 }
+
 
