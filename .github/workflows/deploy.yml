@@ -1,3 +1,19 @@
+name: Deploy React Site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # 👈 Using standard list syntax avoids bracket parsing issues
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
   deploy:
     environment:
@@ -7,22 +23,26 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 24
+          
       - name: Install dependencies
         run: npm install
-        working-directory: ./YOUR_SUBFOLDER_NAME # 👈 Change to your subfolder name
+        
       - name: Build
         run: npm run build
-        working-directory: ./YOUR_SUBFOLDER_NAME # 👈 Change to your subfolder name
+        
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './YOUR_SUBFOLDER_NAME/dist' # 👈 Point to the built folder inside the subfolder
+          path: './dist'
+          
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
